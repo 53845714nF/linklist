@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Instal Hugo
+      run: sudo apt install hugo
+
+    - name: Build Hugo Site
+      run: |
+        hugo --minify
+        find public -name "*.html" | xargs sed -i '/<head>/ s|<head>|<head><meta name="google-site-verification" content="c7T3Vp-FF-V3OyUOr6Gd3-YKd2XOqFRmIHnTri26bFI" />|'
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./public
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+  
+  deploy:
+     runs-on: ubuntu-latest
+     needs: build
+     permissions:
+       pages: write
+       id-token: write
+     environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+     steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
