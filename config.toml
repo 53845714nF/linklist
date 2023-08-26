@@ -36,7 +36,7 @@ disableKinds = ["taxonomy", "term"]
     # { patreon = "https://www.patreon.com/username" },
     # { reddit = "https://reddit.com/user/username" },
     # { slack = "https://workspace.url/team/userid" },
-    { stack-overflow = " https://stackoverflow.com/users/19719003/53845714nf" },
+    { stack-overflow = "https://stackoverflow.com/users/19719003/53845714nf" },
     { hack-the-box = {href= "https://app.hackthebox.com/profile/1563285", text = "<b>Hack</b>the<b>Box</b>" }},
     # { steam = "https://steamcommunity.com/profiles/userid" },
     # { telegram = "https://t.me/username" },
