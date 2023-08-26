@@ -21,7 +21,8 @@ jobs:
         hugo version
 
     - name: Build Hugo Site
-      run: hugo --minify
+      run: hugo --minify \
+                --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
