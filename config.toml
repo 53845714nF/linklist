@@ -45,7 +45,7 @@ disableKinds = ["taxonomy", "term"]
     # { twitter = "https://twitter.com/username" },
     # { whatsapp = "https://wa.me/phone-number" },
     # { youtube = "https://youtube.com/username" },
-    { hackwiki = {href= "https://hackwiki.de", text = "Hackwiki" }},
+    { hackwiki = {href= "https://www.hackwiki.de", text = "Hackwiki" }},
   ]
 
 [module]
