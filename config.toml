@@ -10,7 +10,7 @@ disableKinds = ["taxonomy", "term"]
 
 [author]
   name = "Sebastian Feustel"
- # headline = ""
+  headline = "IT-Professional"
   image = "img/me.jpg"
 
   links = [
