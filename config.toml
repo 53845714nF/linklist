@@ -36,8 +36,9 @@ disableKinds = ["taxonomy", "term"]
     # { patreon = "https://www.patreon.com/username" },
     # { reddit = "https://reddit.com/user/username" },
     # { slack = "https://workspace.url/team/userid" },
-    { stack-overflow = "https://stackoverflow.com/users/19719003/53845714nf" },
+    { hackwiki = {href= "https://www.hackwiki.de", text = "Personal blog" }},
     { hack-the-box = {href= "https://app.hackthebox.com/profile/1563285", text = "<b>Hack</b>the<b>Box</b>" }},
+    { stack-overflow = "https://stackoverflow.com/users/19719003/53845714nf" },
     # { steam = "https://steamcommunity.com/profiles/userid" },
     # { telegram = "https://t.me/username" },
     # { tumblr = "https://username.tumblr.com" },
@@ -45,7 +46,6 @@ disableKinds = ["taxonomy", "term"]
     # { twitter = "https://twitter.com/username" },
     # { whatsapp = "https://wa.me/phone-number" },
     # { youtube = "https://youtube.com/username" },
-    { hackwiki = {href= "https://www.hackwiki.de", text = "Hackwiki" }},
   ]
 
 [module]
